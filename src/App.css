@@ -5,3 +5,65 @@
   row-gap: 5px;
   font-family: Verdana;
 }
+* span {
+  font-weight: bolder;
+}
+.App-link {
+  color: #61dafb;
+}
+
+/* Header */
+.Header {
+  display: flex;
+  grid-row-start: auto;
+  padding-left: 25px;
+  border-bottom: grey;
+  border-bottom-color: grey;
+  border-bottom-style: solid;
+  line-height: 5px;
+  justify-content: center;
+  border-bottom-width: thin;
+  margin: 10%;
+}
+.Header h2 {
+  color: olive;
+}
+
+/* Main */
+.Main {
+  justify-self: center;
+}
+.Main ul {
+  display: flex;
+  list-style: none;
+  border-style: solid;
+  border-radius: 20px 20px 20px 20px;
+  border-color: grey;
+  max-width: 800px;
+  justify-items: center;
+  border-bottom: grey;
+}
+.Main label {
+  font-size: 12px;
+  padding: 5px;
+}
+.Main a {
+  color: darkgray;
+  font-style: normal;
+  text-decoration: none;
+}
+.Main a:hover {
+  color: olive;
+}
+.Main button {
+  border-radius: 10px;
+}
+
+.Main button:hover {
+  color: olive;
+  background-color: black;
+}
+
+.Main select {
+  border-radius: 10px;
+}
