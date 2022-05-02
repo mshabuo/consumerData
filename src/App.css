@@ -1,6 +1,6 @@
 .App {
   display: grid;
-  grid-template-rows: 0.2fr 2fr 0.5fr;
+  grid-template-rows: 0.2fr 2fr 0.1fr;
   text-align: center;
   row-gap: 5px;
   font-family: Verdana;
@@ -23,7 +23,7 @@
   line-height: 5px;
   justify-content: center;
   border-bottom-width: thin;
-  margin: 10%;
+  margin: 2%;
 }
 .Header h2 {
   color: olive;
@@ -52,18 +52,34 @@
   font-style: normal;
   text-decoration: none;
 }
-.Main a:hover {
-  color: olive;
-}
 .Main button {
   border-radius: 10px;
 }
-
 .Main button:hover {
+  color: white;
+  background-color: black;
+}
+.Main select {
+  border-radius: 10px;
+}
+
+/*ConsumerCard */
+.ConsumerCard a:hover {
   color: olive;
+}
+.ConsumerCard button {
+  border-radius: 10px;
+}
+.ConsumerCard button:hover {
+  color: white;
   background-color: black;
 }
 
-.Main select {
-  border-radius: 10px;
+/* Footer */
+.Footer {
+  border-top: grey;
+  border-top-width: thin;
+  border-top-style: solid;
+  color: grey;
+  margin: 2%;
 }

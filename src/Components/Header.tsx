@@ -1,8 +1,8 @@
-import React from "react"
+import React, { ReactElement } from "react"
 
 interface Props {}
 
-export const Header = (props: Props) => {
+export default function Header({}: Props): ReactElement {
   return (
     <div className="Header">
       <h2>CONSUMER INFORMATION</h2>

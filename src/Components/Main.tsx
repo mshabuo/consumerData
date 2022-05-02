@@ -1,15 +1,15 @@
 import React, { ReactElement, useEffect, useState } from "react"
 import moment from "moment"
+import { Link } from "react-router-dom"
 
 interface Props {}
 
 export default function Main({}: Props): ReactElement {
-  const [consumersData, setConsumersData] = useState<any[]>([])
+  const [consumerData, setConsumerData] = useState<any[]>([])
   const [filter, setFilter] = useState<string>("")
   const [limit, setLimit] = useState<number>(10)
 
   useEffect(() => {
-    // API handling
     fetch(
       "https://green-meadow-0b6c10003.azurestaticapps.net/building-location.json"
     )
@@ -17,11 +17,11 @@ export default function Main({}: Props): ReactElement {
         return response.json()
       })
       .then(data => {
-        setConsumersData(data.locations)
+        setConsumerData(data.locations)
       })
   }, [])
 
-  let consumers = consumersData.map(location => location.consumers).flat()
+  let consumers = consumerData.map(location => location.consumers).flat()
 
   // pagination implementation
   if (filter && filter == "isNumber") {
@@ -42,7 +42,7 @@ export default function Main({}: Props): ReactElement {
           }}
           className="custom-select"
         >
-          <option value="allCustomers">All Customers</option>
+          <option value="allConsumers">All Consumers</option>
           <option value="isNumber">Mobile Number</option>
         </select>
 
@@ -53,7 +53,9 @@ export default function Main({}: Props): ReactElement {
             return (
               <ul>
                 <li key={consumerId}>
-                  <h3>{name}</h3>
+                  <Link to={`/consumer/${consumerId}`}>
+                    <h3>{name}</h3>
+                  </Link>
                   <dl>
                     <dt>
                       <span>Email:</span> {email}
