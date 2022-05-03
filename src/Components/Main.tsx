@@ -23,7 +23,7 @@ export default function Main({}: Props): ReactElement {
 
   let consumers = consumerData.map(location => location.consumers).flat()
 
-  // pagination implementation
+  // filter implementation
   if (filter && filter == "isNumber") {
     consumers = consumers.filter(({ isPhoneMobile }) => isPhoneMobile)
   }
